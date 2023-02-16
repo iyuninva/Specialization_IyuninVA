@@ -1,0 +1,6 @@
+.csproj
+*csproj
+bin/
+obj/
+bin
+obj
