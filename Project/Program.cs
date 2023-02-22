@@ -47,11 +47,11 @@ void ArrayTransformation(string[] Array)
     }
     Console.WriteLine(count);
     string[] ArrayNow = new string[count];
-    for (int j = 0; j < Array.Length; j++)
+    for (int k = 0; k < Array.Length; k++)
     {
-        if (Array[j].Length <= 3)
+        if (Array[k].Length <= 3)
         {
-            ArrayNow[j] = Array[j];
+            ArrayNow[k] = Array[k];
         }
     }
     Console.WriteLine();
