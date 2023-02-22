@@ -37,10 +37,22 @@ string[] ArrayCompletion(string[] Array)
 // Метод преоразования массива
 void ArrayTransformation(string[] Array)
 {
-    string[] ArrayNow = new string[new Random().Next(1, 4)];
-    for (int j = 0; j < ArrayNow.Length; j++)
+    int count = 0;
+    for (int j = 0; j < Array.Length; j++)
     {
-        ArrayNow[j] = Array[new Random().Next(0, 5)];
+        if (Array[j].Length <= 3)
+        {
+            count++;
+        }
+    }
+    Console.WriteLine(count);
+    string[] ArrayNow = new string[count];
+    for (int j = 0; j < Array.Length; j++)
+    {
+        if (Array[j].Length <= 3)
+        {
+            ArrayNow[j] = Array[j];
+        }
     }
     Console.WriteLine();
     Console.Write("Новый массив строк: ");
